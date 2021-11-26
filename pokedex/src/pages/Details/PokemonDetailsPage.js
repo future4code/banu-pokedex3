@@ -3,7 +3,6 @@ import Header from '../../Components/Header';
 import { BASE_URL } from '../../constantes/urls';
 import { goToHomePage, goToPokedexPage } from '../../routes/coordinator';
 import { pokeTypes, pokeTypePT } from '../../constantes/pokemonTypes';
-import '../StyleReset/ResetCss.css'
 import { useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import escudo from '../../img/escudo.png';
