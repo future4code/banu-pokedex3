@@ -1,4 +1,4 @@
-// import React, { useContext } from 'react';
+
 import '../StyleReset/ResetCss.css'
 import { useHistory } from 'react-router-dom';
 import { goToHomePage, goToPokemonDetailsPage, goToBattlePage } from '../../routes/coordinator';

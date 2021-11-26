@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../Components/Header'
 import PokemonCard from '../../Components/PokemonCards'
-import '../StyleReset/ResetCss.css'
 import { useHistory } from 'react-router-dom'
 import { goToHomePage, goToPokedexPage, goToPokemonDetailsPage } from '../../routes/coordinator'
 import { BASE_URL } from '../../constantes/urls'
