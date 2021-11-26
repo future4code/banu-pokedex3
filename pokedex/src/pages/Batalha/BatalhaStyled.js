@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import fundo from '../../img/fundo.jpg'
+
 
 export const FullPage = styled.div`
   width: 100vw;
@@ -6,6 +8,7 @@ export const FullPage = styled.div`
   display: flex;
   flex-direction: column;
   font-family: Arial;
+  background-image:url(${fundo});
 `;
 
 export const ContainerCard = styled.div`
@@ -19,6 +22,7 @@ export const ContainerCard = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
   text-align: justify;
+  background-image:url(${fundo});
   @media (max-width: 375px) {
     width: 40%;
   };
@@ -31,14 +35,18 @@ export const ContainerCardPoke = styled.div`
   align-items: flex-end;
   background-color: rgb(240, 238, 238);
   width: 90%;
+  background:yellow;
+  padding: 30%;
+  
 `;
 
 export const ImagemContainer = styled.div`
   width: 100%;
-  height: 20vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 `;
 
 export const Img = styled.img`
@@ -76,8 +84,10 @@ export const ContDo = styled.div`
 
 export const ContTre = styled.img`
   width: 10vw;
+    background:#7a007a;
   @media (max-width: 375px) {
     width: 30vw;
+  
   };
 `;
 

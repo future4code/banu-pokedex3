@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import fundo from '../../img/fundo.jpg'
 
+
 export const PaginaCompleta = styled.div`
   width: 100vw;
   height: 100vh;
@@ -8,6 +9,7 @@ export const PaginaCompleta = styled.div`
   flex-direction: column;
   align-items: center;
   font-family: Arial;
+  color: blue;
 `
 
 export const CardHome = styled.div`
@@ -17,6 +19,7 @@ export const CardHome = styled.div`
   column-gap: 35px;
   margin: 10px 10px 10px 0px;
   background-image:url(${fundo});
+
 
   @media(max-width: 1075px) {
     grid-template-columns: 1fr 1fr 1fr ;

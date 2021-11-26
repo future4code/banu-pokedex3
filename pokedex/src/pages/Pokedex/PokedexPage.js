@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+// import React, { useContext } from 'react';
 import '../StyleReset/ResetCss.css'
 import { useHistory } from 'react-router-dom';
 import { goToHomePage, goToPokemonDetailsPage, goToBattlePage } from '../../routes/coordinator';
@@ -35,7 +35,7 @@ function PokedexPage() {
     <PaginaCompleta>
       <>
         <Header
-          titlePage='PoKeDeX'
+          titlePage='POKEDEX'
           leftButton='VOLTAR PARA HOME'
           leftIcon={<KeyboardReturnIcon />}
           rightButton='BATALHAR'
@@ -49,7 +49,7 @@ function PokedexPage() {
             return <PokemonCard
               key={poke.id}
               PokeName={poke.name}
-              PokePhoto={poke.sprites.front_default}
+              PokePhoto={poke.sprites.other.home.front_default}
               UpButton='EXCLUIR'
               OnUp={() => excluirDaPokedex(poke.name)}
               IconUp={<DeleteIcon />}

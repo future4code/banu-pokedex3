@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import fundo from '../../img/fundo.jpg'
 
 export const PaginaCompleta = styled.div`
     width: 100vw;
@@ -6,6 +7,8 @@ export const PaginaCompleta = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image:url(${fundo});
+  
 `
 
 export const CardPokemon = styled.div`

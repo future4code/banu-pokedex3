@@ -44,13 +44,14 @@ function Batalha() {
     }
     else {
       alert("Selecione dois Pokémons para iniciar uma batalha!");
+
     };
   };
 
   return (
     <FullPage>
       <Header
-        titlePage='POKÉ BATTLE'
+        titlePage='BATALHA'
         leftButton='VOLTAR PARA HOME'
         leftIcon={<HomeIcon />}
         rightButton='POKÉDEX'
@@ -76,7 +77,7 @@ function Batalha() {
               return (
                 <ContUm key={poke.name} onClick={() => sendToBattle(poke)} >
                   <ContDo>
-                    <ContTre src={poke.sprites.front_default} />
+                    <ContTre src={poke.sprites.other.home.front_default} />
                   </ContDo>
                 </ContUm>
               )

@@ -7,12 +7,13 @@ import { pokeTypes, pokeTypePT } from '../../constantes/pokemonTypes';
 import '../StyleReset/ResetCss.css'
 import { useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
-import icon_09 from '../../img/icon_09.png';
-import icon_10 from '../../img/icon_10.png';
-import icon_23 from '../../img/icon_23.png';
-import icon_35 from '../../img/icon_35.png';
-import icon_36 from '../../img/icon_36.png';
-import icon_134 from '../../img/icon_134.png';
+import fundo from '../../img/fundo.jpg'
+import escudo from '../../img/escudo.png';
+import escudoo from '../../img/escudoo.png';
+import botas from '../../img/botas.png';
+import espadas from '../../img/espadas.png';
+import coracao from '../../img/coracao.png';
+import espadas1 from '../../img/espadas1.png'
 // import { PageCompleta, InformaContainer, ImagemCard, DetalhesContainer, PokeContainer, PokemonInforma, ForcaContainer, TipoContainer, PokeType, PokeImageContainer, HabilidadesContainer, PokemonHabilidades, Habilidades, HabilidadesIcones, PokemonNome, MovimentoEspecial, pokeTypes } from './DetailsStyled';
 
 
@@ -23,6 +24,7 @@ const PageCompleta = styled.div`
     font-family: Arial;
     width: 100vw;
     height: 100vh;
+    
 `;
 
 const InformaContainer = styled.div`
@@ -31,10 +33,12 @@ const InformaContainer = styled.div`
     justify-content: center;
     align-items: start;
     background-color: rgb(240, 238, 238);
+    background-image:url(${fundo});
     @media (max-width: 375px) {
         background-color: white;
         align-items: normal;
         justify-content: center;
+        
     };
     @media (min-width: 720px) {
         height: 100%;
@@ -91,6 +95,7 @@ const PokeContainer = styled.div`
     @media (max-width: 375px) {
         margin-top: 1em;
         margin-bottom: 0.5em;
+        
     };
 `;
 
@@ -100,6 +105,7 @@ const PokemonInforma = styled.div`
     margin-bottom: 1em;
     display: flex;
     justify-content: center;
+    
     @media (max-width: 375px) {
         margin-bottom: 0px;
         font-size: 16px;
@@ -111,6 +117,7 @@ const ForcaContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
+    
     @media (max-width: 375px) {
         margin-bottom: 0px;
     };
@@ -121,6 +128,7 @@ const TipoContainer = styled.div`
     justify-content: space-evenly;
     margin-bottom: 1em;
     width: 60%;
+    
     @media (max-width: 375px) {
         margin-top: 0.2em;
         margin-bottom: 0px;
@@ -131,6 +139,8 @@ const TipoContainer = styled.div`
 
 const PokeImageContainer = styled.div`
     display: flex;
+    align-items: center;
+    
 `;
 
 const HabilidadesContainer = styled.div`
@@ -232,36 +242,36 @@ function PokemonDetailsPage() {
                             </TipoContainer>
                         </ForcaContainer>
                         <PokeImageContainer>
-                            <ImagemCard src={pokeDetails.sprites.front_default} alt={`${pokeDetails.name} front default`} />
-                            <ImagemCard src={pokeDetails.sprites.back_default} alt={`${pokeDetails.name} back default`} />
+                            <ImagemCard src={pokeDetails.sprites.other.home.front_default} alt={`${pokeDetails.name} front default`} />
+                            <ImagemCard src={pokeDetails.sprites.other.home.front_shiny} alt={`${pokeDetails.name} back shiny`} />
                         </PokeImageContainer>
                         <HabilidadesContainer>
                             <PokemonInforma>HABILIDADES</PokemonInforma>
                             <PokemonHabilidades>
                                 <Habilidades>
-                                    <HabilidadesIcones src={icon_134} />
+                                    <HabilidadesIcones src={coracao} />
                                     Saúde: {pokeDetails.stats[0].base_stat}
                                 </Habilidades>
                                 <Habilidades>
-                                    <HabilidadesIcones src={icon_35} />
+                                    <HabilidadesIcones src={espadas1} />
                                     Ataque: {pokeDetails.stats[1].base_stat}
                                 </Habilidades>
                                 <Habilidades>
-                                    <HabilidadesIcones src={icon_09} />
+                                    <HabilidadesIcones src={escudo} />
                                     Defesa: {pokeDetails.stats[2].base_stat}
                                 </Habilidades>
                             </PokemonHabilidades>
                             <PokemonHabilidades>
                                 <Habilidades>
-                                    <HabilidadesIcones src={icon_36} />
+                                    <HabilidadesIcones src={espadas} />
                                     Ataque especial: {pokeDetails.stats[3].base_stat}
                                 </Habilidades>
                                 <Habilidades>
-                                    <HabilidadesIcones src={icon_10} />
+                                    <HabilidadesIcones src={escudoo} />
                                     Defesa especial: {pokeDetails.stats[4].base_stat}
                                 </Habilidades>
                                 <Habilidades>
-                                    <HabilidadesIcones src={icon_23} />
+                                    <HabilidadesIcones src={botas} />
                                     Velocidade: {pokeDetails.stats[5].base_stat}
                                 </Habilidades>
                             </PokemonHabilidades>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../Components/Header'
 import PokemonCard from '../../Components/PokemonCards'
-import styled from 'styled-components'
 import '../StyleReset/ResetCss.css'
 import { useHistory } from 'react-router-dom'
 import { goToHomePage, goToPokedexPage, goToPokemonDetailsPage } from '../../routes/coordinator'
@@ -72,7 +71,7 @@ function HomePage() {
 
     const newArrayPokemon = [...states.pokedex, poke]
     setters.setPokedex(newArrayPokemon)
-    alert('Add com sucesso');
+    alert('Pokemon adicionado com sucesso!');
 
   };
 
@@ -113,7 +112,7 @@ function HomePage() {
                 key={value.id}
                 PokeName={value.name}
                 PokePhoto={value.sprites.other.home.front_default}
-                UpButton='ADD A POKEDEX'
+                UpButton='ADICIONAR'
                 OnUp={() => pegaPokemonOnClick(value)}
                 IconUp={<AddCircleIcon />}
                 DowButton='DETALHES'
