@@ -4,8 +4,6 @@ import '../pages/StyleReset/ResetCss.css'
 import Button from '@material-ui/core/Button';
 
 
-/*Componente de cards de Pokemons */
-
 const ContainerCard = styled.div`
 display: flex;
 flex-direction: column;
@@ -92,33 +90,33 @@ const PokeName = styled.div`
 
 function PokemonCard(props) {
 
-    return (
+  return (
 
-        <ContainerCard >
-            <PokeName>{props.PokeName}</PokeName>
-            <ImagemContainer>
-                <Img src={props.PokePhoto}></Img>
-            </ImagemContainer>
+    <ContainerCard >
+      <PokeName>{props.PokeName}</PokeName>
+      <ImagemContainer>
+        <Img src={props.PokePhoto}></Img>
+      </ImagemContainer>
 
-            <ContainerBotoes>
-                <Button
-                variant="contained"
-                color="primary"
-                size="medium"                
-                startIcon={props.IconUp}
-                onClick={props.OnUp}
-                >{props.UpButton}</Button>
+      <ContainerBotoes>
+        <Button
+          variant="contained"
+          color="primary"
+          size="medium"
+          startIcon={props.IconUp}
+          onClick={props.OnUp}
+        >{props.UpButton}</Button>
 
-                <Button 
-                variant="contained"
-                color="primary"
-                size="medium"                
-                startIcon={props.IconDow}
-                onClick={props.OnDow}
-                >{props.DowButton}</Button>                
-            </ContainerBotoes>
-        </ContainerCard>
-    );
+        <Button
+          variant="contained"
+          color="primary"
+          size="medium"
+          startIcon={props.IconDow}
+          onClick={props.OnDow}
+        >{props.DowButton}</Button>
+      </ContainerBotoes>
+    </ContainerCard>
+  );
 };
 
 export default PokemonCard;
