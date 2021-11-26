@@ -14,7 +14,8 @@ position: relative;
 border: 1px solid black;
 border-radius: 25px;
 font-family: roboto;
-
+box-shadow: 3px 3px black, -1em 0 0.4em #093ba9;
+border-style:outset;
 @media(max-width: 1075px) {
     width: 30vw;
     height: 40vh;

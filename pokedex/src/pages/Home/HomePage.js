@@ -14,6 +14,7 @@ import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import InfoIcon from '@material-ui/icons/Info';
 import { PaginaCompleta, CardHome, Paginacao } from './HomeStyled'
+import Swal from 'sweetalert2'
 
 
 function HomePage() {
@@ -71,7 +72,7 @@ function HomePage() {
 
     const newArrayPokemon = [...states.pokedex, poke]
     setters.setPokedex(newArrayPokemon)
-    alert('Pokemon adicionado com sucesso!');
+    Swal.fire('Pokemon adicionado com sucesso!');
 
   };
 
@@ -91,9 +92,12 @@ function HomePage() {
 
   })
 
+
   return (
 
+
     <PaginaCompleta>
+
 
       <Header
         titlePage='POKEMONS'
@@ -122,6 +126,7 @@ function HomePage() {
           })}
         </CardHome>}
 
+
       <Paginacao>
         <Pagination count={56} color="primary" onChange={onChangePagina} />
       </Paginacao>
@@ -131,3 +136,4 @@ function HomePage() {
 }
 
 export default HomePage;
+

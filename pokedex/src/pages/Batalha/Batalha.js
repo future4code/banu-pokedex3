@@ -6,7 +6,7 @@ import { goToHomePage, goToPokedexPage } from '../../routes/coordinator'
 import HomeIcon from '@material-ui/icons/Home';
 import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
 import { FullPage, ContainerCard, ContainerCardPoke, ImagemContainer, Img, Cont, DivLado, ContUm, ContDo, ContTre, ButtonContainer, PokeBattleContainer, BattleButton } from "./BatalhaStyled";
-
+import Swal from 'sweetalert2'
 
 function Batalha() {
 
@@ -32,18 +32,18 @@ function Batalha() {
         secondPokeStatus = secondPokeStatus + secondPoke.stats[x].base_stat;
       };
       if (firstPokeStatus > secondPokeStatus) {
-        alert(`${firstPoke.name} venceu ${secondPoke.name} na batalha de Pokémons!`);
+        Swal.fire(`${firstPoke.name} venceu ${secondPoke.name} na batalha de Pokémons!`);
       }
       else if (secondPokeStatus > firstPokeStatus) {
-        alert(`${secondPoke.name} venceu ${firstPoke.name} na batalha de Pokémons!`);
+        Swal.fire(`${secondPoke.name} venceu ${firstPoke.name} na batalha de Pokémons!`);
       }
       else if (secondPokeStatus === firstPokeStatus || firstPokeStatus === secondPokeStatus) {
-        alert(`${secondPoke.name} empatou com ${firstPoke.name} na batalha de Pokémons!`);
+        Swal.fire(`${secondPoke.name} empatou com ${firstPoke.name} na batalha de Pokémons!`);
       }
       setArrayPokeBattle([]);
     }
     else {
-      alert("Selecione dois Pokémons para iniciar uma batalha!");
+      Swal.fire("Selecione dois Pokémons para iniciar uma batalha!");
 
     };
   };
