@@ -34,6 +34,8 @@ export const ContainerCardPoke = styled.div`
   justify-content: center;
   align-items: flex-end;
   background-color: rgb(240, 238, 238);
+  Box-shadow: 10px 5px 5px black ;
+  border-style:outset;
   width: 90%;
   background:yellow;
   padding: 30%;
@@ -95,6 +97,13 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  Box-shadow: 10px 5px 5px black ;
+  font_family:roobot;
+  &:hover {
+    cursor: pointer;
+    background-color: lightblue;
+}
+
 `;
 
 export const PokeBattleContainer = styled.div`
@@ -112,6 +121,10 @@ export const PokeBattleContainer = styled.div`
 export const BattleButton = styled.button`
   width: 120px;
   height: 40px;
+  &:hover {
+    cursor: pointer;
+    background-color:#006491 ;
+}
 `;
 
 export default styled;
