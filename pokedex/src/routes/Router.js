@@ -2,8 +2,8 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import HomePage from '../pages/Home/HomePage';
 import PokedexPage from '../pages/Pokedex/PokedexPage';
-import PokemonDetailsPage from '../pages/Details/PokemonDetailsPage';
-import Batalha from '../pages/Batalha/Batalha';
+import PokemonDetailsPage from '../pages/Details/PokemonDetailsPage'
+import Batalha from '../pages/Batalha/Batalha'
 
 
 function Router() {
